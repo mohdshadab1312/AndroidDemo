@@ -23,8 +23,6 @@ jobs:
     
     steps:
       - checkout
-       name: remove local settings
-       command: rm local.properties
 
       # Download and cache dependencies
       - restore_cache:
