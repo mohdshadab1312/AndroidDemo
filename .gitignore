@@ -13,6 +13,9 @@ bin/
 gen/
 out/
 
+#Local properties file SDK location
+local.properties
+
 # Gradle files
 .gradle/
 build/
