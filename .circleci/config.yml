@@ -41,7 +41,7 @@ jobs:
       # run tests!
       - run: gradle test
           name: Run Tests
-          command: ./gradlew lint test
+          command: ./gradlew searchDriver
 
 
 
