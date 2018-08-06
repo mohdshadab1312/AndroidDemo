@@ -35,7 +35,8 @@ public class searchDriver {
         onView(withId(R.id.textSearch)).perform(typeText("sa"));
         ViewInteraction driver_name=  onView(withText("Sarah Scott")).inRoot(RootMatchers.isPlatformPopup());
         driver_name.perform(click());
-
+        Thread.sleep(2000);
+            
         //Click on call button
         onView(withId(R.id.fab)).perform(click());
     }
