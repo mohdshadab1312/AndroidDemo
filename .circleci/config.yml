@@ -37,7 +37,7 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-		  # start the emulator
+      # start the emulator
       - emulator -avd circleci-android24 -no-window:
         background: true
         parallel: true
