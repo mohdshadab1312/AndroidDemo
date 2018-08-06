@@ -37,6 +37,12 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+		  # start the emulator
+      - emulator -avd circleci-android24 -no-window:
+        background: true
+        parallel: true
+      # wait for it to have booted
+      - circle-android wait-for-boot
       - run:
           name: Run Tests
           command: ./gradlew connectedAndroidTest
@@ -46,3 +52,4 @@ jobs:
       - store_test_results:
           path: app/build/test-results
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples   
+	  
