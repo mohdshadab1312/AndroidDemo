@@ -45,7 +45,7 @@ jobs:
         background: true
         parallel: true
       - circle-android wait-for-boot
-	  - run:
+      - run:
           name: Run Tests
           command: ./gradlew connectedAndroidTest
       - store_artifacts:
